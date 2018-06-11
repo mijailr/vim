@@ -5,6 +5,9 @@ syntax on
 colorscheme nord
 set cursorline
 set noshowmode
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_uniform_diff_background = 1
