@@ -20,4 +20,15 @@ map <leader>bd :Bclose<cr>
 "
 map <leader>ba :1,1000 bd!<cr>
 
+" Write files as sudo
 command! W w !sudo tee "%" > /dev/null
+
+" Vim fugitive maping                                                           
+                                                                                
+nmap <leader>gb :Gblame<cr>                                                     
+nmap <leader>gw :Gwrite<cr>                                                     
+nmap <leader>gp :Gpull<cr>                                                      
+nmap <leader>gP :Gpush<cr>                                                      
+nmap <leader>gs :Gstatus<cr>                                                    
+nmap <leader>gd :Gvdiff<cr>                                                     
+nmap <leader>gc :Gcommit<cr>
