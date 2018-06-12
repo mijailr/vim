@@ -6,9 +6,10 @@ endif
 
 call plug#begin()
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'airblade/vimgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim',{'as': 'dracula'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
@@ -26,7 +27,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-five'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
