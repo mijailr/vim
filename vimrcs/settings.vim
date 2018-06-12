@@ -12,3 +12,6 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_uniform_diff_background = 1
 let g:lightline = { 'colorscheme': 'nord' }
+
+" Enable deoplete
+let g:deoplete#enable_at_startup = 1
