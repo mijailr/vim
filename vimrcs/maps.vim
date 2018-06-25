@@ -7,7 +7,8 @@ map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
 nmap <leader>w :w!<cr>
-
+nmap <leader>q :q<cr>
+nmap <leader>wq :wq<cr>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
