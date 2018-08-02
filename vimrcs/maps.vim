@@ -32,3 +32,9 @@ nmap <leader>gP :Gpush<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gd :Gvdiff<cr>
 nmap <leader>gc :Gcommit<cr>
+
+" vv to generate new vertical split
+nnoremap <silent> vv <C-w>v
+map <leader>vz :VimuxZoomRunner<CR>
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
