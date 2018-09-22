@@ -6,10 +6,16 @@ endif
 
 call plug#begin()
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
+Plug 'mhinz/vim-mix-format'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim',{'as': 'dracula'}
@@ -17,7 +23,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-user'
