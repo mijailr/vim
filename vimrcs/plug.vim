@@ -9,28 +9,28 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
-Plug 'mhinz/vim-mix-format'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim',{'as': 'dracula'}
 Plug 'elixir-editors/vim-elixir'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'garbas/vim-snipmate'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 Plug 'honza/vim-snippets'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-emoji'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
 Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'mhinz/vim-mix-format'
+Plug 'mxw/vim-jsx'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'pangloss/vim-javascript'
 Plug 'nightsense/carbonized'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'roxma/nvim-yarp'
@@ -52,5 +52,6 @@ Plug 'vim-scripts/Conque-Shell'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'vim-scripts/mru.vim'
 Plug 'w0rp/ale'
+Plug 'M4R7iNP/vim-inky'
 
 call plug#end()
