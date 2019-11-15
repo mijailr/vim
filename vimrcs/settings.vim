@@ -8,7 +8,7 @@ nnoremap <esc><esc> :noh<return>
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
-colorscheme onehalfdark
+colorscheme onedark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
 " Enable deoplete
@@ -27,7 +27,7 @@ set shiftwidth=2
 set softtabstop=2
 
 let g:mix_format_on_save = 1
-
+let g:vim_json_syntax_conceal = 0
 let s:user_dir = expand('~/.vim')
 
 " let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugged/vim-elixirls/elixir-ls/release'
@@ -156,3 +156,5 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 let g:airline#extensions#coc#enabled = 1
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'

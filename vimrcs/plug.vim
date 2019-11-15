@@ -5,23 +5,27 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
+Plug 'M4R7iNP/vim-inky'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag'
 Plug 'arcticicestudio/nord-vim'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'dracula/vim',{'as': 'dracula'}
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'elixir-editors/vim-elixir'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'elzr/vim-json'
 Plug 'garbas/vim-snipmate'
-Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 Plug 'honza/vim-snippets'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'sheerun/vim-polyglot'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-emoji'
+Plug 'joshdick/onedark.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
@@ -29,9 +33,8 @@ Plug 'matze/vim-move'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-mix-format'
 Plug 'mxw/vim-jsx'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
-Plug 'nightsense/carbonized'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
@@ -47,11 +50,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Conque-Shell'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'vim-scripts/mru.vim'
 Plug 'w0rp/ale'
-Plug 'M4R7iNP/vim-inky'
 
 call plug#end()

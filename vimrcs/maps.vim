@@ -38,3 +38,10 @@ nnoremap <silent> vv <C-w>v
 map <leader>vz :VimuxZoomRunner<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
+
+
+" Use gd to go to definition
+nmap <silent> gd <Plug>(coc-definition)
+
+" Use K to show_documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
