@@ -5,6 +5,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 nnoremap <esc><esc> :noh<return>
 
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
+
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
@@ -14,7 +16,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 " Enable deoplete
 " let g:deoplete#enable_at_startup = 1
 
-let g:alchemist#elixir_erlang_src = "/usr/local/share/src"
 let g:ConqueTerm_CloseOnEnd = 1
 set number relativenumber
 set colorcolumn=80
@@ -26,19 +27,15 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-let g:mix_format_on_save = 1
+let g:mix_format_elixir_bin_path = '~/.asdf/installs/elixir/1.9.4/bin/'
+
 let g:vim_json_syntax_conceal = 0
 let s:user_dir = expand('~/.vim')
 
-" let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugged/vim-elixirls/elixir-ls/release'
+let g:coc_snippet_next = '<tab>'
+let g:airline#extensions#coc#enabled = 1
 
-" let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
-
-let g:ale_fixers = {}
-
-let g:ale_fixers.elixir = [ 'mix_format' ]
-
-set hidden
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
 
 set cmdheight=1
 set updatetime=300
@@ -58,22 +55,7 @@ endfunction
 
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -86,13 +68,7 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -100,16 +76,6 @@ augroup mygroup
   " Update signature help on jump placeholder
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
-
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -119,29 +85,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-if emoji#available()
-  " set completefunc=emoji#complete
-endif
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -154,7 +97,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
-let g:airline#extensions#coc#enabled = 1
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
+autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
