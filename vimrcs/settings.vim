@@ -7,27 +7,33 @@ nnoremap <esc><esc> :noh<return>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 
+let g:ale_set_loclist = 0
+let g:mix_format_silent_errors = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 colorscheme onedark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
+nnoremap <space> /
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " Enable deoplete
 " let g:deoplete#enable_at_startup = 1
 
 let g:ConqueTerm_CloseOnEnd = 1
 set number relativenumber
+set clipboard=unnamedplus
 set colorcolumn=80
-set laststatus=2
-syntax on
 set cursorline
 set noshowmode
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set laststatus=2
+syntax on
 
 let g:mix_format_elixir_bin_path = '~/.asdf/installs/elixir/1.9.4/bin/'
+let g:mix_format_on_save = 1
 
 let g:vim_json_syntax_conceal = 0
 let s:user_dir = expand('~/.vim')
@@ -100,4 +106,5 @@ endfunction
 
 autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
 
