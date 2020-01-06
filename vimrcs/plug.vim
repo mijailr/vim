@@ -1,16 +1,18 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin()
+Plug '/usr/local/opt/fzf'
 Plug 'M4R7iNP/vim-inky'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
+Plug 'aklt/plantuml-syntax'
 Plug 'alvan/vim-closetag'
 Plug 'andyl/vim-textobj-elixir'
 Plug 'arcticicestudio/nord-vim'
@@ -25,9 +27,11 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 Plug 'jacoborus/tender.vim'
+Plug 'janko/vim-test'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-emoji'
+Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
@@ -41,6 +45,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/vim-slumlord'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'spf13/vim-autoclose'
 Plug 'svermeulen/vim-easyclip'

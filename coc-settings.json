@@ -1,0 +1,9 @@
+{
+  "diagnostic.virtualText": true,
+  "codeLens.enable": true,
+  "elixirLS.suggestSpecs": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.format.enabled": true
+}

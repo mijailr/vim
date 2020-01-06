@@ -15,6 +15,11 @@ let g:airline_powerline_fonts = 1
 colorscheme onedark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
+" let g:ale_fixers = { 'java': ['google_java_format']}
+let g:ale_java_checkstyle_config = '~/java/checkstyle.xml'
+" let g:ale_java_checkstyle_options = '-c ~/java/checkstyle.xml'
+let g:ale_set_balloons = 1
+
 nnoremap <space> /
 " autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " Enable deoplete
@@ -107,4 +112,8 @@ endfunction
 autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
+let test#java#runner = 'gradletest'
 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
