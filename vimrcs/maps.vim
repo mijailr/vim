@@ -3,7 +3,7 @@ let mapleader = ','
 map <leader>o :BufExplorer<cr>
 
 map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
+map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
 nmap <leader>w :w!<cr>
@@ -27,7 +27,7 @@ map <leader>ba :1,1000 bd!<cr>
 command! W w !sudo tee "%" > /dev/null
 
 " Vim fugitive maping
-nmap <leader>gb :Gblame<cr> 
+nmap <leader>gb :Gblame<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gp :Gpull<cr>
 nmap <leader>gP :Gpush<cr>
@@ -80,7 +80,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> ti :TestNearest<CR>
 nmap <silent> tf :TestFile<CR>
 nmap <silent> ts :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>

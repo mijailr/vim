@@ -5,6 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+
 Plug '/usr/local/opt/fzf'
 Plug 'M4R7iNP/vim-inky'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -15,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'aklt/plantuml-syntax'
 Plug 'alvan/vim-closetag'
 Plug 'andyl/vim-textobj-elixir'
+Plug 'andyl/vim-textobj-elixir'
 Plug 'arcticicestudio/nord-vim'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -23,9 +25,11 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'ianks/vim-tsx'
 Plug 'jacoborus/tender.vim'
 Plug 'janko/vim-test'
 Plug 'joshdick/onedark.vim'
@@ -34,6 +38,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
 Plug 'maxbrunsfeld/vim-yankstack'
@@ -62,7 +67,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Conque-Shell'
 Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/dbext.vim'
 Plug 'vim-scripts/mru.vim'
+Plug 'wakatime/vim-wakatime'
 Plug 'wikitopian/hardmode'
 
 call plug#end()

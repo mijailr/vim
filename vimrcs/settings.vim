@@ -12,11 +12,11 @@ let g:mix_format_silent_errors = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
-colorscheme onedark
+colorscheme onehalfdark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
 " let g:ale_fixers = { 'java': ['google_java_format']}
-let g:ale_java_checkstyle_config = '~/java/checkstyle.xml'
+let g:ale_java_checkstyle_config = '~/Documents/Java/checkstyle.xml'
 " let g:ale_java_checkstyle_options = '-c ~/java/checkstyle.xml'
 let g:ale_set_balloons = 1
 
@@ -37,7 +37,7 @@ set softtabstop=2
 set laststatus=2
 syntax on
 
-let g:mix_format_elixir_bin_path = '~/.asdf/installs/elixir/1.9.4/bin/'
+let g:mix_format_elixir_bin_path = '~/.asdf/installs/elixir/1.10.2/bin/'
 let g:mix_format_on_save = 1
 
 let g:vim_json_syntax_conceal = 0
@@ -115,5 +115,8 @@ autocmd StdinReadPre * let s:std_in=1
 let test#java#runner = 'gradletest'
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Golang settings
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
