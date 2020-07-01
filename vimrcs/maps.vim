@@ -2,9 +2,14 @@ let mapleader = ','
 
 map <leader>o :BufExplorer<cr>
 
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
+" map <leader>nn :NERDTreeToggle<cr>
+" map <leader>nb :NERDTreeFromBookmark
+" map <leader>nf :NERDTreeFind<cr>
+"
+
+nmap <space>e :CocCommand explorer<CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>

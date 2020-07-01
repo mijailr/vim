@@ -10,14 +10,14 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 let g:ale_set_loclist = 0
 let g:mix_format_silent_errors = 1
 let g:airline#extensions#ale#enabled = 1
+" let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 colorscheme onehalfdark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
-
-" let g:ale_fixers = { 'java': ['google_java_format']}
+let g:ale_fixers = { 'java': ['google_java_format']}
 let g:ale_java_checkstyle_config = '~/Documents/Java/checkstyle.xml'
-" let g:ale_java_checkstyle_options = '-c ~/java/checkstyle.xml'
+let g:ale_java_checkstyle_options = '-c ~/java/checkstyle.xml'
 let g:ale_set_balloons = 1
 
 nnoremap <space> /
@@ -120,3 +120,11 @@ autocmd StdinReadPre * let s:std_in=1
 
 " Golang settings
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_functions = 1
+
+let g:markdownfmt_autosave=1
+let g:indentLine_concealcursor = "nv"

@@ -8,9 +8,11 @@ call plug#begin()
 
 Plug '/usr/local/opt/fzf'
 Plug 'M4R7iNP/vim-inky'
+Plug 'MattesGroeger/vim-bookmarks'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'moorereason/vim-markdownfmt'
+Plug 'cespare/vim-toml'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'aklt/plantuml-syntax'
@@ -49,7 +51,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/vim-slumlord'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'spf13/vim-autoclose'
