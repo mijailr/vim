@@ -126,5 +126,17 @@ let g:go_highlight_types = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_functions = 1
 
-let g:markdownfmt_autosave=1
+let g:markdownfmt_autosave=0
 let g:indentLine_concealcursor = "nv"
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+
+set  runtimepath+=/usr/local/opt/fzf

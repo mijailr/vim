@@ -7,6 +7,8 @@ endif
 call plug#begin()
 
 Plug '/usr/local/opt/fzf'
+Plug 'yuki-ycino/fzf-preview.vim'
+Plug 'mileszs/ack.vim'
 Plug 'M4R7iNP/vim-inky'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'MarcWeber/vim-addon-mw-utils'
