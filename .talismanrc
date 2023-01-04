@@ -1,0 +1,5 @@
+fileignoreconfig:
+- filename: vimrcs/settings.vim
+  checksum: 7357a359e3cc0f9b449198e359a2a25d6d14e3a6277eeb9c75e3abd6ab1e8456
+  ignore_detectors: []
+scopeconfig: []

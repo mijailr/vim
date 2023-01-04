@@ -3,6 +3,7 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+
 nnoremap <esc><esc> :noh<return>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
@@ -11,9 +12,9 @@ let g:ale_set_loclist = 0
 let g:mix_format_silent_errors = 1
 let g:airline#extensions#ale#enabled = 1
 " let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
-let g:airline_theme='onehalfdark'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
-colorscheme onehalfdark
+colorscheme onedark
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 let g:ale_fixers = { 'java': ['google_java_format']}
 let g:ale_java_checkstyle_config = '~/Documents/Java/checkstyle.xml'
@@ -138,5 +139,22 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 set  runtimepath+=/usr/local/opt/fzf
+
+let g:snipMate = { 'snippet_version' : 1 }
